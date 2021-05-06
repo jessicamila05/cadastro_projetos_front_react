@@ -33,14 +33,14 @@ class Login extends Component {
             password: this.state.password
         }).then(response => {
             LocalStorageService.addItem('_user_login', response.data)
-            this.props.history.push('/userRegister')
+            this.props.history.push('/projects')
         }).catch( erro => {
            messageError(erro.response.data);
         })
     }
 
     goUserRegistration = () => {
-        this.props.history.push('/userResgister')
+        this.props.history.push('/userRegister')
     }
    
     
